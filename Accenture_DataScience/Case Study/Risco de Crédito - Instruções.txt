@@ -1,0 +1,15 @@
+A Diretoria de Risco de Crédito de grande banco brasileiro contratou a Accenture para desenvolver um modelo preditivo que os ajude a identificar os clientes com maior probabilidade de default, seja negando o empréstimo, ou concendo-o sob uma maior taxa de juros, o que permitirá um aumento na lucratividade dessa determinada carteira de clientes.
+
+Sua tarefa será prever a probabilidade de default - que está identificado na variável default do dataset.  O resultado de seu estudo será encaminhado para as áreas jurídica e de negócios para a elaboração de novos contratos e produtos, portanto os resultados precisam ser acompanhados de uma explicação do funcionamento do seu modelo, em diferentes cenários.
+
+Parte dos dados foi anonimizado para preservar o caráter sigiloso da informação. Você ainda poderá utilizar essas variáveis na sua análise caso desejar.
+
+Os resultados devem ser apresentados para a equipe avaliadora em power point ou dashboard em tableau, power bi, qlik (ou qualquer outra forma de visualização de sua preferência). Nessa apresentação deverão ser contemplados os seguintes tópicos: 
+•	Processo para escolha das variáveis utilizadas 
+•	Quais algoritmos utilizou/testou e o motivo 
+•	Medidas de ajuste 
+•	Caracterização de cada grupo 
+Além dos aspectos técnicos do estudo, serão avaliadas: 
+•	Estruturação lógica da apresentação 
+•	Desenvoltura na apresentação 
+•	Os códigos desenvolvidos na análise (Python ou R) devem ser enviados para a equipe avaliadora
