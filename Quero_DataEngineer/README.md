@@ -77,4 +77,4 @@ python3 root/main.py
 ```
 A successful run looks as follows:
 
-![Screenshot of successful run](screenshots/successful_run.png)
+![Screenshot of successful run](./screenshots/successful_run.PNG)
