@@ -1,7 +1,10 @@
 # Quero Educação - Data Engineer Job Application
 Hard skills exercise for the application process to a Data Engineer position.
-I was asked to extract data from their API and load it to a PostgreSQL table.
-
+## Exercise Instructions
+We some public data available through an API, your challenge is to make the
+extraction, transformation and load this data in a database, the final table
+should have the schema structured according to best practices.
+## Description
 The following sets up a container to host a local PostgreSQL server and a python
 script which performs the Extract, Transform, and Load (ETL) of the data.
 The python script checks if a file called ```input``` exists in it's directory.
@@ -26,7 +29,8 @@ NOTE: If the script is run outside of a container, skip the Build Instructions.
 - main.py - main script with performs ETL process
 - setup_sql - ---NOT IN USE---
 
-## Build Instructions
+## Instructions
+### Build
 The following instructions are for setting up the pipeline in a docker container.
 Run the following script to initiate setup:
 ```bash run.sh new```

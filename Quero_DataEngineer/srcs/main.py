@@ -16,19 +16,22 @@ def extract_data():
 	reads from file.
 	'''
 	if not os.path.exists('./input'):
+		print("Data file not found in current directory. Making API request...")
 		with open("./input", "w") as f:
 			r = requests.get("http://dataeng.quero.com:5000/caged-data")
 			if r.status_code != 200:
 				raise Exception("ERROR: Request failed")
 			data = r.json()
 			f.write(json.dumps(data))
+			print('\t', "API Data retrieved successfully!", '\n')
 	else:
+		print("Data found in current directory. Accessing local data...")
 		with open("./input") as f:
 			 data = json.loads(f.read())
+			 print('\t', "Local Data retrieved successfully!", '\n')
 
 	if data['success'] == 'false':
-		# TO DO: check if it's warning or error.
-		print("WARNING: Data retrieved from API may be corrupt")
+		print(colored("WARNING: Data retrieved from API may be incomplete/corrupt", 'yellow'))
 	return data['caged']
 
 
@@ -90,7 +93,10 @@ def df_to_SQL_stringio(connection, cursor, df, table):
 		cursor.execute("SELECT * FROM {} WHERE id='{}'".format(table, 1))
 		row = cursor.fetchone()
 		colnames = [desc[0] for desc in cursor.description]
-		print(colnames, row)
+		print("--- Below are the table headers to confirm entry ---")
+		print(colnames, '\n')
+		print("--- Below is the table entry for id=1 ---")
+		print(row, '\n')
 	except (Exception, Error) as error:
 		print(colored("ERROR: {}".format(error), 'white', 'on_red'))
 
